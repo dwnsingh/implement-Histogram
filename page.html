@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histogram</title>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+<body>
+    <div id="beforeButton" style="display: flex;justify-content: center;">
+        <button id="confirmButtom">Show Charts</button>
+    </div>
+    <div id="afterButton" style="display: none;">
+        <div style="display: flex;">
+            <label for="post_sample_size">post sample size</label>
+            <input type="number" id="post_sample_size" min="1" max="100" value="100" style="margin: 0px 10px;">
+            <label for="post_range">words range</label>
+            <input type="number" id="post_range" min="100" value="500" style="margin: 0px 10px;">
+            <button id="set_post_word_count">Redraw</button>
+        </div>
+        <p id="wordsinPost"></p>
+        <div id="wordsPerPost" ></div>
+
+
+        <div style="display: flex;">
+            <label for="page_sample_size">page sample size</label>
+            <input type="number" id="page_sample_size" min="1" max="100" value="100" style="margin: 0px 10px;">
+            <label for="page_range">words range</label>
+            <input type="number" id="page_range" min="50" value="100" style="margin: 0px 10px;">
+            <button id="set_page_word_count">Redraw</button>
+        </div>
+        <p id="wordsinPage"></p>
+        <div id="wordsPerPage" ></div>
+    </div>
+    
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="wordCounter.js"></script>
+</body>
+</html>
